@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+Tag's
+*/
+
+header {
+    display: flex;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 25vh 0;
+
+}
+
+/*
+Classes
+*/
+
+.navbar {
+    display: flex;
+    background-color: rgb(147, 147, 241);
+    width: 100%;
+    height: 10%;
+}
+
+/*
+Identificadores
+*/
+
+#player-video {
+    width: 100%;       
+    
+    max-width: 1000px;    
+}
+
+@media screen and (max-width: 1000px) {
+    #player-video {
+        padding: 0 10px; 
+    }
+}
