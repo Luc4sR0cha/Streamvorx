@@ -19,6 +19,23 @@ a {
     color: inherit;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-image: linear-gradient(to top, #000000, #370927);
+    gap: 15px;
+}
+
 
 /*
 Classes
@@ -27,13 +44,13 @@ Classes
 .navbar {
     display: flex;
     align-items: center;
-    background-color: rgb(27, 27, 70);
+    background-color: rgb(6, 3, 27);
     width: 100%;
     padding: 1.5vh 2vw;
 }
 
 .navbar-itens {
-    margin: 0 10vw;
+    margin: 0 5 vw;
     display: flex;
     font-size: 2vh;
     list-style: none;
@@ -45,7 +62,7 @@ Classes
     text-transform: capitalize;
     display: block;
     padding: 0.5vw 2vw;
-    background-color: rgb(61, 36, 187);
+    background-color: rgba(32, 17, 109, 0.839);
     border-radius: 1vh;
     transition: background-color 0.2s, transform 0.2s;
 }
@@ -55,12 +72,33 @@ Classes
     transform: translateY(-2px);
 }
 
-.video-conteiner {
-    display: flex;
-    justify-content: center;
-    margin: 25vh 0;
+.options-container {
+    background-image: linear-gradient(to bottom, rgb(23, 0, 31), rgb(22, 0, 47));
+    flex: 1;
 }
 
+.video-container {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.chat-container {
+    background-color: rgb(116, 91, 136);
+    flex: 3;
+    border: 1vh solid rgba(39, 16, 48, 0.662);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    background-color: black;
+    padding: 10px;
+    width: 100%;
+}
 /*
 Identificadores
 */
@@ -72,12 +110,37 @@ Identificadores
 }
 
 #player-video {
+    max-width: 100%;
     width: 100%;
-    max-width: 1000px;
+    margin: auto;
+    object-fit: contain;
 }
 
-@media screen and (max-width: 1000px) {
-    #player-video {
-        padding: 0 10px;
-    }
+#chat {
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 1vw;
+    font-size: 1.5vh;
 }
+
+
+
+#chat-input {
+    padding: 0.5vw;
+    font-size: 1.5vh;
+    margin-top: auto;
+    border: 0.1vh solid #ccc;
+    border-radius: 1vh;
+    margin: 1vh;
+    background-color: rgb(235, 236, 236);
+    transition-duration: 0.1s;
+}
+
+#chat-input:focus {
+    outline: none;
+    transition-duration: 0.05s;
+    border: 0.5vh solid rgb(198, 40, 158);
+}
+
+
