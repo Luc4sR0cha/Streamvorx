@@ -22,13 +22,13 @@ a {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
 }
 
 main {
     width: 100%;
-    height: 100%;
+    min-height: 0;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -89,6 +89,7 @@ Classes
 .chat-container {
     background-color: rgb(116, 91, 136);
     flex: 3;
+    min-height: 0;
     border: 1vh solid rgba(39, 16, 48, 0.662);
     display: flex;
     flex-direction: column;
@@ -117,13 +118,15 @@ Identificadores
 }
 
 #chat {
-    width: 100%;
-    height: 100%;
+    flex: 1;
+    min-height: 0;
     color: white;
     padding: 1vw;
     font-size: 1.5vh;
+    overflow-y: auto;
+    scrollbar-width: 1vw;
+    scrollbar-color: rgb(40, 28, 37) transparent;
 }
-
 
 
 #chat-input {
